@@ -4,7 +4,7 @@ from scapy.all import sniff
 class PacketScan:
     def __init__(self):
         self.ipMacMap = {}
-        print("started scanning for ARP attacks - press ctrl+c to stop")
+        print("started scanning for ARP spoofing - press ctrl+c to stop")
         sniff(count=0, filter="arp", store=0, prn=self.scan)
 
     def scan(self, packet):
