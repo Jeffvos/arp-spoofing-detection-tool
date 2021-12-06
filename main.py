@@ -9,6 +9,7 @@ class PacketScan:
     def scan(self, packet):
         os.system("clear")
         print("started scanning for ARP spoofing - press ctrl+c to stop")
+
         ip = packet['ARP'].psrc
         macAdress = packet['Ether'].src
         print(ip, macAdress)
